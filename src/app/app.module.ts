@@ -19,7 +19,6 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     ShopingCartListComponent,
-   
     ApiServiceComponent
   ],
   imports: [
