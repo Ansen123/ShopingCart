@@ -6,7 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ShopingCartListComponent } from './shoping-cart-list/shoping-cart-list.component';
-
+import { ApiComponent } from './api/api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiserviceComponent } from './apiservice/apiservice.component';
+import { ApiServiceComponent } from './api.service/api.service.component';
 const appRoutes:Routes=[
   {
     path:"",component:ShopingCartListComponent
@@ -16,12 +19,16 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    ShopingCartListComponent
+    ShopingCartListComponent,
+    ApiComponent,
+    ApiserviceComponent,
+    ApiServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
